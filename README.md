@@ -27,6 +27,7 @@ driver = webdriver.Chrome()
 Now we use the getfunction of webdriver.Chrome() to open the Flipkart website page in our Chrome driver object.
 
 url = 'https://flipkart.com'
+
 driver.get(url)
 
 # Now there are a few ways we can conduct a product search :
@@ -37,7 +38,9 @@ However, this kind of automation is unnecessary and it creates a potential for p
 
 Let’s search the input inside the search area and hit enter. You’ll notice that the search term has now been embedded into the URL site. Now we can use this pattern to create a function that will build the necessary URL for our driver to retrieve. This will be much more efficient in the long term and less prone to program failure. The image is like below.
 
+
 def get_url(search_item):
+
 
     '''
     This function fetches the URL of the item that you want to search
@@ -53,6 +56,7 @@ def get_url(search_item):
 Now we have a function that will generate a URL based on the search term we provide.
 
 url = get_url('iphones')
+
 print(url)
 
 then we can change the url of driver
