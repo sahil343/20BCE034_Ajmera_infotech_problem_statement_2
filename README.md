@@ -223,3 +223,10 @@ def main(search_item):
         writer = csv.writer(f)
         writer.writerow(['Model','Stars','Num_of_Ratings','Reviews','Ram','Storage','Expandable','Display','Camera','Battery','Processor','Warranty','Price'])
         writer.writerows(records)
+
+# References:
+ 1)Let’s Build a Python Web Scraping Project from Scratch | Hands-On Tutorial by Aakash N S, 
+    CEO, Jovian: https://www.youtube.com/watch?v=RKsLLG-bzEY
+ 2)Beautiful Soup Documentation: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+ 3)How to scrape Amazon.com: https://www.youtube.com/watch v=_AeudsbKYG8&list=PLHnSLOMOPT11ORMDapNppzDKBYnWWP66O
+ 4)https://medium.com/@chirag.sharma0378/web-scraping-mobile-phone-data-from-flipkart-using-python-a13f8cf29d99
