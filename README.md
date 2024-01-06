@@ -38,11 +38,15 @@ However, this kind of automation is unnecessary and it creates a potential for p
 Let’s search the input inside the search area and hit enter. You’ll notice that the search term has now been embedded into the URL site. Now we can use this pattern to create a function that will build the necessary URL for our driver to retrieve. This will be much more efficient in the long term and less prone to program failure. The image is like below.
 
 def get_url(search_item):
+
     '''
     This function fetches the URL of the item that you want to search
     '''
+    
     template = 'https://www.flipkart.com/search?q={}&as=on&as-show=on&otracker=AS_Query_HistoryAutoSuggest_1_4_na_na_na&otracker1=AS_Query_HistoryAutoSuggest_1_4_na_na_na&as-pos=1&as-type=HISTORY&suggestionId=mobile+phones&requestId=e625b409-ca2a-456a-b53c-0fdb7618b658&as-backfill=on'
-    # We'are replacing every space with '+' to adhere with the pattern 
+    
+    # We'are replacing every space with '+' to adhere with the pattern
+    
     search_item = search_item.replace(" ","+")
     return template.format(search_item)
 
@@ -52,8 +56,9 @@ url = get_url('iphones')
 print(url)
 
 then we can change the url of driver
-url = 'https://flipkart.com'](https://www.flipkart.com/search?q={}&as=on&as-show=on&otracker=AS_Query_HistoryAutoSuggest_1_4_na_na_na&otracker1=AS_Query_HistoryAutoSuggest_1_4_na_na_na&as-pos=1&as-type=HISTORY&suggestionId=mobile+phones&requestId=e625b409-ca2a-456a-b53c-0fdb7618b658&as-backfill=on'
-    search_item = search_item.replace(" ","+"))https://www.flipkart.com/search?q={}&as=on&as-show=on&otracker=AS_Query_HistoryAutoSuggest_1_4_na_na_na&otracker1=AS_Query_HistoryAutoSuggest_1_4_na_na_na&as-pos=1&as-type=HISTORY&suggestionId=mobile+phones&requestId=e625b409-ca2a-456a-b53c-0fdb7618b658&as-backfill=on'
-    search_item = search_item.replace(" ","+")
+
+url = 'https://flipkart.com'](https://www.flipkart.com/search?q={}&as=on&as-show=on&otracker=AS_Query_HistoryAutoSuggest_1_4_na_na_na&otracker1=AS_Query_HistoryAutoSuggest_1_4_na_na_na&as-pos=1&as-type=HISTORY&suggestionId=mobile+phones&requestId=e625b409-ca2a-456a-b53c-0fdb7618b658&as-backfill=on' 
+
+search_item = search_item.replace(" ","+")
 
 driver.get(url)
