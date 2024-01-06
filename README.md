@@ -145,11 +145,15 @@ Let’s consolidate what we have done so far by combining everything. At the end
 # Importing necessary Libraries
 
 import csv
+
 from bs4 import BeautifulSoup
+
 from selenium import webdriver
+
 import pandas as pd
 
 def get_url(search_item):
+    
     '''
     This function fetches the URL of the item that you want to search
     '''
@@ -162,6 +166,7 @@ def get_url(search_item):
     return url
 
 def extract_phone_model_info(item):
+    
     """
     This function extracts model, price, ram, storage, stars , number of ratings, number of reviews, 
     storage expandable option, display option, camera quality, battery , processor, warranty of a phone model at flipkart
@@ -195,11 +200,15 @@ def extract_phone_model_info(item):
     result = (model,star,num_ratings,reviews,ram,storage,expandable,display,camera,battery,processor,warranty,price)
     return result
 
+
 def main(search_item):
+    
     '''
     This function will create a dataframe for all the details that we are fetching from all the multiple pages
     '''
-    driver = webdriver.Chrome()
+    
+    driver = webdriver.Chrome() 
+    
     records = []
     url = get_url(search_item)
     for page in range(1,464):
