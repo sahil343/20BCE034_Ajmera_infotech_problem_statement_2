@@ -15,8 +15,11 @@
 # Importing Libraries
 Let’s start by installing the required packages.
 import csv
+
 from bs4 import BeautifulSoup
+
 from selenium import webdriver
+
 import pandas as pd
 
 # Starting up the WebDriver
