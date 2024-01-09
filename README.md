@@ -36,10 +36,6 @@ driver.get(url)
 
 # Now there are a few ways we can conduct a product search :
 
-The first way is to automate the browser by finding the input element and then insert a text and hit enter key on the keyboard. The image is like below and keeps doing this.
-
-However, this kind of automation is unnecessary and it creates a potential for program failure. The Rule of thumb for automation is to only automate what you absolutely need to when Web Scraping.
-
 Let’s search the input inside the search area and hit enter. You’ll notice that the search term has now been embedded into the URL site. Now we can use this pattern to create a function that will build the necessary URL for our driver to retrieve. This will be much more efficient in the long term and less prone to program failure. The image is like below.
 
 
